@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Button, Flex, Icon, Text, Image } from "@chakra-ui/react";
-import { FaReddit } from "react-icons/fa";
+import { FaFemale } from "react-icons/fa";
 import { Community, communityState } from "../../atoms/communitiesAtom";
 import useCommunityData from "../../hooks/useCommunityData";
 import { useSetRecoilState } from "recoil";
@@ -14,15 +14,19 @@ const Header: React.FC<HeaderProps> = ({ communityData }) => {
    * !!!Don't pass communityData boolean until the end
    * It's a small optimization!!!
    */
-  const { communityStateValue, loading, error, onJoinLeaveCommunity } =
-    useCommunityData(!!communityData);
+  const {
+    communityStateValue,
+    loading,
+    error,
+    onJoinLeaveCommunity,
+  } = useCommunityData(!!communityData);
   const isJoined = !!communityStateValue.mySnippets.find(
     (item) => item.communityId === communityData.id
   );
 
   return (
     <Flex direction="column" width="100%" height="146px">
-      <Box height="50%" bg="blue.400" />
+      <Box height="50%" bg="#765de5;" />
       <Flex justifyContent="center" bg="white" height="50%">
         <Flex width="95%" maxWidth="860px">
           {/* IMAGE URL IS ADDED AT THE VERY END BEFORE DUMMY DATA - USE ICON AT FIRST */}
@@ -34,16 +38,16 @@ const Header: React.FC<HeaderProps> = ({ communityData }) => {
               alt="Dan Abramov"
               position="relative"
               top={-3}
-              color="blue.500"
+              color="#765de5;"
               border="4px solid white"
             />
           ) : (
             <Icon
-              as={FaReddit}
+              as={FaFemale}
               fontSize={64}
               position="relative"
               top={-3}
-              color="blue.500"
+              color="#765de5;"
               border="4px solid white"
               borderRadius="50%"
             />

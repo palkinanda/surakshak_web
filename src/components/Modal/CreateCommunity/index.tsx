@@ -54,7 +54,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
 
     if (format.test(name) || name.length < 3) {
       return setNameError(
-        "Community names must be between 3–21 characters, and can only contain letters, numbers, or underscores."
+        "Channel names must be between 3–21 characters, and can only contain letters, numbers, or underscores."
       );
     }
 
@@ -65,7 +65,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
       await runTransaction(firestore, async (transaction) => {
         const communityDoc = await transaction.get(communityDocRef);
         if (communityDoc.exists()) {
-          throw new Error(`Sorry, /r${name} is taken. Try another.`);
+          throw new Error(`Sorry, ${name} is taken. Try another.`);
         }
 
         transaction.set(communityDocRef, {
@@ -83,16 +83,16 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
           }
         );
       });
-    } catch (error: any) {
+    } catch (error) {
       console.log("Transaction error", error);
-      setNameError(error.message);
+      setNameError(error);
     }
     setSnippetState((prev) => ({
       ...prev,
       mySnippets: [],
     }));
     handleClose();
-    router.push(`r/${name}`);
+    router.push(`${name}`);
     setLoading(false);
   };
 
@@ -114,7 +114,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
         fontSize={15}
         padding={3}
       >
-        Create a community
+        Create a channel
       </ModalHeader>
       <Box pr={3} pl={3}>
         <Divider />
@@ -124,7 +124,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
             Name
           </Text>
           <Text fontSize={11} color="gray.500">
-            Community names including capitalization cannot be changed
+            Channel names including capitalization cannot be changed
           </Text>
           <Text
             color="gray.400"
@@ -156,7 +156,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
           </Text>
           <Box mt={4} mb={4}>
             <Text fontWeight={600} fontSize={15}>
-              Community Type
+              Channel Type
             </Text>
             <Stack spacing={2} pt={1}>
               <Checkbox
@@ -171,7 +171,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
                     Public
                   </Text>
                   <Text fontSize="8pt" color="gray.500" pt={1}>
-                    Anyone can view, post, and comment to this community
+                    Anyone can view, post, and comment to this channel
                   </Text>
                 </Flex>
               </Checkbox>
@@ -187,7 +187,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
                     Restricted
                   </Text>
                   <Text fontSize="8pt" color="gray.500" pt={1}>
-                    Anyone can view this community, but only approved users can
+                    Anyone can view this channel, but only approved users can
                     post
                   </Text>
                 </Flex>
@@ -204,7 +204,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
                     Private
                   </Text>
                   <Text fontSize="8pt" color="gray.500" pt={1}>
-                    Only approved users can view and submit to this community
+                    Only approved users can view and submit to this channel
                   </Text>
                 </Flex>
               </Checkbox>
@@ -222,7 +222,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
           onClick={handleCreateCommunity}
           isLoading={loading}
         >
-          Create Community
+          Create Channel
         </Button>
       </ModalFooter>
     </ModalWrapper>

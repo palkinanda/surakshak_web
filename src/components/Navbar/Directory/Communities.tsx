@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Box, Flex, Icon, MenuItem, Text } from "@chakra-ui/react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { FaReddit } from "react-icons/fa";
+import { FaFemale } from "react-icons/fa";
 import { GrAdd } from "react-icons/gr";
 import { useRecoilValue } from "recoil";
 import { communityState } from "../../../atoms/communitiesAtom";
@@ -40,7 +40,7 @@ const Communities: React.FC<CommunitiesProps> = ({ menuOpen }) => {
                 key={snippet.communityId}
                 displayText={`r/${snippet.communityId}`}
                 link={`/r/${snippet.communityId}`}
-                icon={FaReddit}
+                icon={FaFemale}
                 iconColor="brand.100"
               />
             ))}
@@ -48,7 +48,7 @@ const Communities: React.FC<CommunitiesProps> = ({ menuOpen }) => {
       )}
       <Box mt={3} mb={4}>
         <Text pl={3} mb={1} fontSize="7pt" fontWeight={500} color="gray.500">
-          MY COMMUNITIES
+          MY CHANNELS
         </Text>
         <MenuItem
           width="100%"
@@ -58,16 +58,16 @@ const Communities: React.FC<CommunitiesProps> = ({ menuOpen }) => {
         >
           <Flex alignItems="center">
             <Icon fontSize={20} mr={2} as={GrAdd} />
-            Create Community
+            Create Channel
           </Flex>
         </MenuItem>
         {mySnippets.map((snippet) => (
           <MenuListItem
             key={snippet.communityId}
-            icon={FaReddit}
+            icon={FaFemale}
             displayText={`r/${snippet.communityId}`}
             link={`/r/${snippet.communityId}`}
-            iconColor="blue.500"
+            iconColor="#765DE5;"
             imageURL={snippet.imageURL}
           />
         ))}

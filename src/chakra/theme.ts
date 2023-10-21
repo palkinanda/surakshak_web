@@ -5,7 +5,7 @@ import { Input } from "./input";
 export const theme = extendTheme({
   colors: {
     brand: {
-      100: "#FF3C00",
+      100: "#765DE5;",
     },
   },
   fonts: {
@@ -14,7 +14,7 @@ export const theme = extendTheme({
   styles: {
     global: () => ({
       body: {
-        bg: "gray.200",
+        bg: "#F0EEFB;",
       },
     }),
   },

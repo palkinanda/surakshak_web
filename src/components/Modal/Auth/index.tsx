@@ -80,7 +80,7 @@ const AuthModal: React.FC<AuthModalProps> = () => {
           {/* {user && !currentUser && (
                 <>
                   <Spinner size="lg" mt={2} mb={2} />
-                  <Text fontSize="8pt" textAlign="center" color="blue.500">
+                  <Text fontSize="8pt" textAlign="center" color="#765de5;">
                     You are logged in. You will be redirected soon
                   </Text>
                 </>

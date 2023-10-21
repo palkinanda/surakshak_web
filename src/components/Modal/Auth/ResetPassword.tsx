@@ -14,8 +14,9 @@ const ResetPassword: React.FC<ResetPasswordProps> = ({ toggleView }) => {
   const setAuthModalState = useSetRecoilState(authModalState);
   const [email, setEmail] = useState("");
   const [success, setSuccess] = useState(false);
-  const [sendPasswordResetEmail, sending, error] =
-    useSendPasswordResetEmail(auth);
+  const [sendPasswordResetEmail, sending, error] = useSendPasswordResetEmail(
+    auth
+  );
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -50,13 +51,13 @@ const ResetPassword: React.FC<ResetPasswordProps> = ({ toggleView }) => {
               _hover={{
                 bg: "white",
                 border: "1px solid",
-                borderColor: "blue.500",
+                borderColor: "#765de5;",
               }}
               _focus={{
                 outline: "none",
                 bg: "white",
                 border: "1px solid",
-                borderColor: "blue.500",
+                borderColor: "#765de5;",
               }}
               bg="gray.50"
             />
@@ -79,7 +80,7 @@ const ResetPassword: React.FC<ResetPasswordProps> = ({ toggleView }) => {
       <Flex
         alignItems="center"
         fontSize="9pt"
-        color="blue.500"
+        color="#765de5;"
         fontWeight={700}
         cursor="pointer"
       >

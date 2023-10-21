@@ -45,8 +45,8 @@ const PostPage: React.FC<PostPageProps> = () => {
       //   ...prev,
       //   selectedPost: {} as Post,
       // }));
-    } catch (error: any) {
-      console.log("fetchPost error", error.message);
+    } catch (error) {
+      console.log("fetchPost error", error);
     }
     setLoading(false);
   };

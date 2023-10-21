@@ -8,8 +8,6 @@ type Props = {
   children?: React.ReactNode;
 };
 const Layout: React.FC<Props> = ({ children }) => {
-  // useAuth(); // will implement later at end of tutorial
-
   return (
     <>
       <Navbar />

@@ -4,19 +4,19 @@ export const Input: ComponentStyleConfig = {
   baseStyle: {
     field: {
       fontSize: "10pt",
-      bg: "gray.50",
+      bg: "#FF96AA",
       _placeholder: {
-        color: "gray.500",
+        color: "#765DE5",
       },
       _hover: {
         bg: "white",
         border: "1px solid",
-        borderColor: "blue.500",
+        borderColor: "#765DE5",
       },
       _focus: {
         outline: "none",
         border: "1px solid",
-        borderColor: "blue.500",
+        borderColor: "#765DE5",
       },
     },
     addons: {

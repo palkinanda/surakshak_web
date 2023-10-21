@@ -29,13 +29,13 @@ const InputField: React.FC<InputFieldProps> = ({
         _hover={{
           bg: "white",
           border: "1px solid",
-          borderColor: "blue.500",
+          borderColor: "#765DE5;",
         }}
         _focus={{
           outline: "none",
           bg: "white",
           border: "1px solid",
-          borderColor: "blue.500",
+          borderColor: "#765DE5;",
         }}
       />
     </>
