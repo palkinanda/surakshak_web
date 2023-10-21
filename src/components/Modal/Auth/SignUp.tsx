@@ -17,8 +17,12 @@ const SignUp: React.FC<SignUpProps> = ({ toggleView }) => {
     confirmPassword: "",
   });
   const [formError, setFormError] = useState("");
-  const [createUserWithEmailAndPassword, _, loading, authError] =
-    useCreateUserWithEmailAndPassword(auth);
+  const [
+    createUserWithEmailAndPassword,
+    _,
+    loading,
+    authError,
+  ] = useCreateUserWithEmailAndPassword(auth);
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -83,7 +87,7 @@ const SignUp: React.FC<SignUpProps> = ({ toggleView }) => {
       <Flex fontSize="9pt" justifyContent="center">
         <Text mr={1}>Have an account?</Text>
         <Text
-          color="blue.500"
+          color="#765de5;"
           fontWeight={700}
           cursor="pointer"
           onClick={() => toggleView("login")}

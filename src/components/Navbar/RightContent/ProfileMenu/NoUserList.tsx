@@ -13,7 +13,7 @@ const NoUserList: React.FC<NoUserListProps> = ({ setModalState }) => {
       <MenuItem
         fontSize="10pt"
         fontWeight={700}
-        _hover={{ bg: "blue.500", color: "white" }}
+        _hover={{ bg: "#765DE5;", color: "white" }}
         onClick={() => setModalState({ open: true, view: "login" })}
       >
         <Flex alignItems="center">

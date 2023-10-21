@@ -12,7 +12,7 @@ import moment from "moment";
 import { NextRouter } from "next/router";
 import { AiOutlineDelete } from "react-icons/ai";
 import { BsChat, BsDot } from "react-icons/bs";
-import { FaReddit } from "react-icons/fa";
+import { FaFemale } from "react-icons/fa";
 import {
   IoArrowDownCircleOutline,
   IoArrowDownCircleSharp,
@@ -70,8 +70,8 @@ const PostItem: React.FC<PostItemContentProps> = ({
 
       // Could proably move this logic to onDeletePost function
       if (router) router.back();
-    } catch (error: any) {
-      console.log("Error deleting post", error.message);
+    } catch (error) {
+      console.log("Error deleting post", error);
       /**
        * Don't need to setLoading false if no error
        * as item will be removed from DOM
@@ -137,7 +137,7 @@ const PostItem: React.FC<PostItemContentProps> = ({
                       mr={2}
                     />
                   ) : (
-                    <Icon as={FaReddit} fontSize={18} mr={1} color="blue.500" />
+                    <Icon as={FaFemale} fontSize={18} mr={1} color="#765de5;" />
                   )}
                   <Link href={`r/${post.communityId}`}>
                     <Text

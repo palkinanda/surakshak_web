@@ -65,7 +65,7 @@ const Directory: React.FC = () => {
                   </Box>
                 </>
               </Flex>
-              <ChevronDownIcon color="gray.500" />
+              <ChevronDownIcon color="#765DE5;" />
             </Flex>
           </MenuButton>
           <MenuList maxHeight="300px" overflow="scroll" overflowX="hidden">

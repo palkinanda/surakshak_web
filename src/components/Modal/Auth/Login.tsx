@@ -17,8 +17,12 @@ const Login: React.FC<LoginProps> = ({ toggleView }) => {
   });
   const [formError, setFormError] = useState("");
 
-  const [signInWithEmailAndPassword, _, loading, authError] =
-    useSignInWithEmailAndPassword(auth);
+  const [
+    signInWithEmailAndPassword,
+    _,
+    loading,
+    authError,
+  ] = useSignInWithEmailAndPassword(auth);
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -75,7 +79,7 @@ const Login: React.FC<LoginProps> = ({ toggleView }) => {
         </Text>
         <Text
           fontSize="9pt"
-          color="blue.500"
+          color="#765DE5;"
           cursor="pointer"
           onClick={() => toggleView("resetPassword")}
         >
@@ -85,7 +89,7 @@ const Login: React.FC<LoginProps> = ({ toggleView }) => {
       <Flex fontSize="9pt" justifyContent="center">
         <Text mr={1}>New here?</Text>
         <Text
-          color="blue.500"
+          color="#765DE5;"
           fontWeight={700}
           cursor="pointer"
           onClick={() => toggleView("signup")}

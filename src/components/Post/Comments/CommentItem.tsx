@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { Timestamp } from "firebase/firestore";
 import moment from "moment";
-import { FaReddit } from "react-icons/fa";
+import { FaFemale } from "react-icons/fa";
 import {
   IoArrowDownCircleOutline,
   IoArrowUpCircleOutline,
@@ -61,7 +61,7 @@ const CommentItem: React.FC<CommentItemProps> = ({
   return (
     <Flex>
       <Box mr={2}>
-        <Icon as={FaReddit} fontSize={30} color="gray.300" />
+        <Icon as={FaFemale} fontSize={30} color="gray.300" />
       </Box>
       <Stack spacing={1}>
         <Stack direction="row" align="center" spacing={2} fontSize="8pt">
@@ -90,12 +90,12 @@ const CommentItem: React.FC<CommentItemProps> = ({
           <Icon as={IoArrowDownCircleOutline} />
           {userId === comment.creatorId && (
             <>
-              <Text fontSize="9pt" _hover={{ color: "blue.500" }}>
+              <Text fontSize="9pt" _hover={{ color: "#765de5;" }}>
                 Edit
               </Text>
               <Text
                 fontSize="9pt"
-                _hover={{ color: "blue.500" }}
+                _hover={{ color: "#765de5;" }}
                 onClick={() => onDeleteComment(comment)}
               >
                 Delete

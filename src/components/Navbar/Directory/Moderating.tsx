@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Text } from "@chakra-ui/react";
-import { FaReddit } from "react-icons/fa";
+import { FaFemale } from "react-icons/fa";
 import { CommunitySnippet } from "../../../atoms/communitiesAtom";
 import MenuListItem from "./MenuListItem";
 
@@ -11,7 +11,7 @@ type ModeratingProps = {
 const Moderating: React.FC<ModeratingProps> = ({ snippets }) => {
   return (
     <Box mt={3} mb={3}>
-      <Text pl={3} mb={1} fontSize="7pt" fontWeight={500} color="gray.500">
+      <Text pl={3} mb={1} fontSize="7pt" fontWeight={500} color="#765DE5;">
         MODERATING
       </Text>
       {snippets.map((snippet) => (
@@ -19,7 +19,7 @@ const Moderating: React.FC<ModeratingProps> = ({ snippets }) => {
           key={snippet.communityId}
           displayText={`r/${snippet.communityId}`}
           link={`r/${snippet.communityId}`}
-          icon={FaReddit}
+          icon={FaFemale}
           iconColor="brand.100"
         />
       ))}

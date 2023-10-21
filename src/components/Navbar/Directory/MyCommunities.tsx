@@ -1,6 +1,6 @@
 import React from "react";
 import { MenuItem, Flex, Icon, Text, Box } from "@chakra-ui/react";
-import { FaReddit } from "react-icons/fa";
+import { FaFemale } from "react-icons/fa";
 import { GrAdd } from "react-icons/gr";
 import MenuListItem from "./MenuListItem";
 import { CommunitySnippet } from "../../../atoms/communitiesAtom";
@@ -14,7 +14,7 @@ const MyCommunities: React.FC<MyCommunitiesProps> = ({ snippets, setOpen }) => {
   return (
     <Box mt={3} mb={3}>
       <Text pl={3} mb={1} fontSize="7pt" fontWeight={500} color="gray.500">
-        MY COMMUNITIES
+        MY CHANNELS
       </Text>
       <MenuItem
         width="100%"
@@ -24,7 +24,7 @@ const MyCommunities: React.FC<MyCommunitiesProps> = ({ snippets, setOpen }) => {
       >
         <Flex alignItems="center">
           <Icon fontSize={20} mr={2} as={GrAdd} />
-          Create Community
+          Create Channel
         </Flex>
       </MenuItem>
       {snippets.map((snippet) => (
@@ -32,8 +32,8 @@ const MyCommunities: React.FC<MyCommunitiesProps> = ({ snippets, setOpen }) => {
           key={snippet.communityId}
           displayText={`r/${snippet.communityId}`}
           link={`r/${snippet.communityId}`}
-          icon={FaReddit}
-          iconColor="blue.500"
+          icon={FaFemale}
+          iconColor="#765de5;"
         />
       ))}
     </Box>

@@ -21,7 +21,7 @@ import { auth, firestore, storage } from "../../firebase/clientApp";
 import { Community, communityState } from "../../atoms/communitiesAtom";
 import moment from "moment";
 import { useRecoilValue, useSetRecoilState } from "recoil";
-import { FaReddit } from "react-icons/fa";
+import { FaFemale } from "react-icons/fa";
 import { getDownloadURL, ref, uploadString } from "firebase/storage";
 import { doc, updateDoc } from "firebase/firestore";
 
@@ -82,8 +82,8 @@ const About: React.FC<AboutProps> = ({
           imageURL: downloadURL,
         },
       }));
-    } catch (error: any) {
-      console.log("updateImage error", error.message);
+    } catch (error) {
+      console.log("updateImage error", error);
     }
     // April 24 - removed reload
     // window.location.reload();
@@ -98,11 +98,11 @@ const About: React.FC<AboutProps> = ({
         align="center"
         p={3}
         color="white"
-        bg="blue.400"
+        bg="#765DE5;"
         borderRadius="4px 4px 0px 0px"
       >
         <Text fontSize="10pt" fontWeight={700}>
-          About Community
+          About Channel
         </Text>
         <Icon as={HiOutlineDotsHorizontal} cursor="pointer" />
       </Flex>
@@ -127,7 +127,7 @@ const About: React.FC<AboutProps> = ({
                 borderColor="gray.300"
                 cursor="pointer"
               >
-                <Text fontSize="9pt" fontWeight={700} color="blue.500">
+                <Text fontSize="9pt" fontWeight={700} color="#765DE5;">
                   Add description
                 </Text>
               </Box>
@@ -178,7 +178,7 @@ const About: React.FC<AboutProps> = ({
                     <Text fontWeight={600}>Admin</Text>
                     <Flex align="center" justify="space-between">
                       <Text
-                        color="blue.500"
+                        color="#765DE5;"
                         cursor="pointer"
                         _hover={{ textDecoration: "underline" }}
                         onClick={() => selectFileRef.current?.click()}
@@ -194,7 +194,7 @@ const About: React.FC<AboutProps> = ({
                         />
                       ) : (
                         <Icon
-                          as={FaReddit}
+                          as={FaFemale}
                           fontSize={40}
                           color="brand.100"
                           mr={2}

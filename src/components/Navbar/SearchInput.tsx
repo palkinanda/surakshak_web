@@ -20,26 +20,26 @@ const SearchInput: React.FC<SearchInputProps> = ({ user }) => {
       <InputGroup>
         <InputLeftElement
           pointerEvents="none"
-          color="gray.400"
+          color="#765DE5;"
           // children={<SearchIcon mb={2} />}
         >
           <SearchIcon mb={2} />
         </InputLeftElement>
         <Input
-          placeholder="Search Reddit"
+          placeholder="Search Surakshak"
           fontSize="10pt"
-          _placeholder={{ color: "gray.500" }}
+          _placeholder={{ color: "black" }}
           _hover={{
             bg: "white",
             border: "1px solid",
-            borderColor: "blue.500",
+            borderColor: "#765DE5;",
           }}
           _focus={{
             outline: "none",
             border: "1px solid",
-            borderColor: "blue.500",
+            borderColor: "#765DE5;",
           }}
-          height="34px"
+          height="40px"
           bg="gray.50"
         />
       </InputGroup>

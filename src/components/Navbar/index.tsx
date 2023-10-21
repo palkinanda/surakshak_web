@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
   return (
     <Flex
       bg="white"
-      height="44px"
+      height="60px"
       padding="6px 12px"
       justifyContent={{ md: "space-between" }}
     >
@@ -34,12 +34,12 @@ const Navbar: React.FC = () => {
         cursor="pointer"
         onClick={() => onSelectMenuItem(defaultMenuItem)}
       >
-        <Image src="/images/redditFace.svg" height="30px" />
+        {/* <Image src="/images/redditFace.svg" height="30px" />
         <Image
           display={{ base: "none", md: "unset" }}
           src="/images/redditText.svg"
           height="46px"
-        />
+  />*/}
       </Flex>
       {user && <Directory />}
       <SearchInput user={user as User} />

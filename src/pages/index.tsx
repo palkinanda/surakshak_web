@@ -87,7 +87,7 @@ const Home: NextPage = () => {
       }
       // User has not joined any communities yet
       else {
-        console.log("USER HAS NO COMMUNITIES - GETTING GENERAL POSTS");
+        console.log("USER HAS NO CHANNELS - GETTING GENERAL POSTS");
 
         const postQuery = query(
           collection(firestore, "posts"),
